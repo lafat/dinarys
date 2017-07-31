@@ -1,7 +1,7 @@
 # Dinarys Test
 
 ## Установка
-* Склонировать проект в свое локальное веб окружение (у меня это Vagrant + Homestead) у вас может быть любое другое главное чтобы было php >= 5.6 и MySql. Так же понадобиться Node.js
+* Склонировать проект в свое локальное веб окружение (у меня это Vagrant + Homestead) у вас может быть любое другое главное чтобы было php >= 5.6 и MySql и composer. Так же понадобиться Node.js
 
 * Переименовать файл .env.example в .env и в этом файле подключить базу данных это делается в следующих строчках
 ```
@@ -11,6 +11,8 @@ DB_PASSWORD=your_db_password
 ```
 * Открыть консоль в корне проекта и выполнить комманды
 ```
+composer install
+php artisan key:generate
 php artisan migrate
 php artisan passport:install
 ```

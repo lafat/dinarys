@@ -35,7 +35,7 @@
                 this.$validator.validateAll().then(result => {
                     if(result) {
                         var data = {coordinates: this.coordinates}
-                        this.$http.post('http://dinarys.dev/api/coordinates', data)
+                        this.$http.post('/api/coordinates', data)
                             .then(response => {
                                 this.$router.push('/coordinates');
                             })
